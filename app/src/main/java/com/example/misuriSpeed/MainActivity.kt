@@ -290,12 +290,14 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
     private fun calculateResult() {
         val durationInSeconds = (System.currentTimeMillis() - startTimeMillis) / 1000
         val distanceInMeters = locationArray.last().distanceTo(locationArray[0])
+        val formattedDistance = "%.3f".format(distanceInMeters)
         val strideLength = distanceInMeters / stepsRegistered
         val pace = distanceInMeters / durationInSeconds
         val shr = calcSHR(pace)
-        val height = (strideLength / shr).toInt().toString()
+        val height = (strideLength / shr)
+        val formattedHeight = "%.3f".format(height)
 
-        renderToScreen(distanceInMeters.toInt().toString(), height)
+        renderToScreen(formattedDistance, formattedHeight)
     }
 
     /**
