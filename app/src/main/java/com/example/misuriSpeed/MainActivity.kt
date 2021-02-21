@@ -334,7 +334,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
                         appIsRunning = true
                         startTimeMillis = System.currentTimeMillis()
                     }
-                    if (locationUpdatesReceived >= locationUpdatesUntilBreak && stepsRegistered > 40) {
+                    if (locationUpdatesReceived >= locationUpdatesUntilBreak) {
                         appIsRunning = false
                         calculateResult()
                         foregroundOnlyLocationService?.unsubscribeToLocationUpdates()
