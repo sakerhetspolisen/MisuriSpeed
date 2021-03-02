@@ -33,8 +33,8 @@ We need to compile a study of how our calculations differ across a large number 
 4. Lock the screen rotation on your mobile and set up the sound so you can hear notifications 🔔
 5. Open the app and approve movement permissions ✔
 6. Click on "Start measuring your height" and accept location permissions ✔
-7. Put your mobile phone either in your pocket or in your hand and start walking straight. NOTE: Do not turn off the screen while walking
-8. When the phone makes a ringing sound, stop walking
-9. Take a screenshot of the screen and send it along with your actual height to [karl@seller.green](mailto:karl@seller.green)
-10. Delete the app on your phone
+7. Put your mobile phone either in your pocket or in your hand and start walking straight. **NOTE: Do not turn off the screen while walking**
+8. When the phone makes a ringing sound, stop walking.
+9. Take a screenshot of the screen and send it along with your actual height to [karl@seller.green](mailto:karl@seller.green).
+10. Delete the previously downloaded "Misuri Speed" app on your phone.
 11. If possible, repeat steps 2-9 four more times. The more measurement values we get, the better our theory is supported!
