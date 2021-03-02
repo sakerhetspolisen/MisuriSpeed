@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Misuri Speed</string>
-    <string name="app_version">1.2.0</string>
+    <string name="app_name">Misuri</string>
+    <string name="app_version">Release</string>
     <string name="app_loc_updates">Location updates: %1$s</string>
     <string name="tickers_default">0</string>
     <string name="calculation_title">Height calculated:</string>
     <string name="button_text">Start measuring your height</string>
-    <string name="result_body">You walked %1$sm, and your height is calculated to be %2$sm.</string>
+    <string name="result_body">You walked %1$sm for %2$ss at a speed of %3$sm/s and your height is calculated to be %4$sm.</string>
     <string name="launch_activity">Launch activity</string>
     <string name="location_unknown">Location Unknown</string>
     <string name="location_updates_label">Location Updates</string>

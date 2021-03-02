@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
     private lateinit var sharedPreferences:SharedPreferences
     private var appIsRunning = false
 
-    private val locationUpdatesUntilBreak = 10
+    private val locationUpdatesUntilBreak = 20
     private var locationUpdatesReceived = 0
     private var sensorManager:SensorManager? = null
     private var mediaPlayer:MediaPlayer? = null
@@ -137,8 +137,10 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
                 } else {
                     requestForegroundPermissions()
                 }
-                Toast.makeText(this, "Start walking!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "What are you waiting for? Start walking!", Toast.LENGTH_SHORT).show()
                 hasNotBeenClicked = false
+            } else {
+                Toast.makeText(this, "Argh, measuring already started!", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -295,9 +297,9 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         val pace = distanceInMeters / durationInSeconds
         val shr = calcSHR(pace)
         val height = (strideLength / shr)
-        val formattedHeight = "%.3f".format(height)
+        val formattedHeight = "%3f".format(height)
 
-        renderToScreen(formattedDistance, formattedHeight)
+        renderToScreen(formattedDistance, durationInSeconds.toString(), pace.toString(), formattedHeight)
     }
 
     /**
@@ -314,8 +316,8 @@ class MainActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCh
         return shr
     }
 
-    private fun renderToScreen(dist:String, height:String) {
-        resulttextView.text = getString(R.string.result_body,dist,height)
+    private fun renderToScreen(dist:String, time:String, pace:String, height:String) {
+        resulttextView.text = getString(R.string.result_body,dist,time,pace,height)
     }
 
     /**
